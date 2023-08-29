@@ -5,7 +5,7 @@ class Solution:
         z = len(nums) // 3
         x = list(dic.keys())
         y = list(dic.values())
-        a = []$
+        a = []
         count = -1
         for i in y:
             count += 1
