@@ -6,5 +6,4 @@ class Solution:
         for i in s:
             if i in t:
                 t.remove(i)
-        t = "".join(t)
-        return t
+        return t[0]
