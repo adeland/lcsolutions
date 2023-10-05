@@ -2,13 +2,11 @@ class Solution:
     def majorityElement(self, nums: List[int]) -> List[int]:
         from collections import Counter
         dic = Counter(nums)
-        z = len(nums) // 3
         x = list(dic.keys())
-        y = list(dic.values())
         a = []
-        count = -1
-        for i in y:
-            count += 1
-            if i > z:
+        count = 0
+        for i in dic.values():
+            if i > len(nums) // 3:
                 a.append(x[count])
+            count += 1
         return a
