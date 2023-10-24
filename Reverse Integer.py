@@ -8,17 +8,9 @@ class Solution:
         if x[-1] == "-":
             x.pop()
             x.insert(0,"-")
+            
+        x = int("".join(x))
 
-        count = 0
-
-        for i in x:
-            if i == "0":
-                count += 1
-            else:
-                break
-
-        x = int("".join(x[count:]))
-        
         if x >= -2**31 and x <= 2**31:
             return x
         return 0
