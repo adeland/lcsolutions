@@ -1,7 +1,5 @@
 class Solution:
-    from collections import Counter
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        a = Counter(nums)
-        b = sorted(nums, key = lambda x: (-a[x], x))
-        b = list(dict.fromkeys(b))
-        return b[0:k]
+        counts = Counter(nums)
+        sorted_counts = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+        return [x[0] for x in sorted_counts[:k]]
