@@ -7,10 +7,9 @@ class Solution:
         while target != trace:
             trace.append(count)
             stack.append("Push")
-            if count not in target:
+            if count != target[len(trace) - 1]:
                 trace.pop()
                 stack.append("Pop")
             count += 1
-            
+
         return stack
-            
