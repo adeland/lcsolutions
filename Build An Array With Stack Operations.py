@@ -1,15 +1,16 @@
 class Solution:
     def buildArray(self, target: List[int], n: int) -> List[str]:
         stack = []
-        trace = []
         count = 1
+        length = 0
 
-        while target != trace:
-            trace.append(count)
+        while length != len(target):
             stack.append("Push")
-            if count != target[len(trace) - 1]:
-                trace.pop()
+            length += 1
+            if count != target[length - 1]:
                 stack.append("Pop")
+                length -= 1
             count += 1
 
         return stack
+            
