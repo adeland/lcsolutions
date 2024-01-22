@@ -1,7 +1,6 @@
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
 
-        nums = sorted(nums)
         checks = set(nums)
         values = Counter(nums)
         
